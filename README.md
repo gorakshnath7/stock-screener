@@ -40,6 +40,6 @@ In the future, we would consider adding the following features to the finance tr
 
 
 ## Link:
-[MFN-2.0](https://catherinebshaw.github.io/Stock-Tracker/)
+[Stock-Tracker](https://catherinebshaw.github.io/Stock-Tracker/)
 
 
