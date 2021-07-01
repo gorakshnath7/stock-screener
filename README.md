@@ -40,6 +40,6 @@ In the future, we would consider adding the following features to the finance tr
 
 
 ## Link:
-[MFN-2.0](https://daze77.github.io/Money-for-Nothing-2021/)
+[MFN-2.0](https://catherinebshaw.github.io/Stock-Tracker/)
 
 
