@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/8eeec01ced.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+  
+
+
+
+</head>
+
+<body>
+    <div class="header">
+        <h1>Stock Tracker</h1>
+    </div>
+    <div class="container">
+        <div class=" testSearchDiv input-group ">
+            <input type="text" onKeyUp="stockSearch(event)"  list="datalistOptions" class="form-control" id="stockSearch" placeholder="Type to search for your stock..." aria-label="search" aria-describedby="search">
+            <datalist id="datalistOptions">
+                <h5 value="Stock 0"></h5>
+            </datalist>
+        </div>  
+        <div class="row " id="topHalf">
+
+            <div class="col-md-4 d-flex align-items-stretch ">
+                <div class="row ">
+                    <div class="row mb-0">
+                        <div class="col">
+                            <div class="watchlistCard" >
+                                <div class="card-header " id="watchlistheader">
+                                    Watchlist
+                                </div>
+                                <ul class="list-group overflow-auto">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-0">
+                        <div class ="col" >
+                            <div class="carouselCard"> 
+                                <div class="card-header " id="watchlistheader">
+                                NYT Business News
+                                </div>
+                                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                                    <!-- <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                    </div> -->
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active w-100 h-100">
+                                            <img src="https://via.placeholder.com/150" id="nwsImg0" class="d-block w-100" alt="story image">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h6 class="card-title pb-3" id="newsstory0">First slide label</h6>
+                                                <p class="card-text" id="caption0">Some representative placeholder content for the first slide.</p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="https://via.placeholder.com/150" id="nwsImg1" class="d-block w-100" alt="Story Image">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h6 class="card-title pb-3" id="newsstory1">Second slide label</h6>
+                                                <p class="card-text" id="caption1">Some representative placeholder content for the second slide.</p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="https://via.placeholder.com/150" id="nwsImg2" class="d-block w-100" alt="story image">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h6 class="card-title pb-3" id="newsstory2">Third slide label</h6>
+                                                <p class="card-text" id="caption2">Some representative placeholder content for the third slide.</p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="https://via.placeholder.com/150" id="nwsImg3" class="d-block w-100" alt="story image">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h6 class="card-title pb-3" id="newsstory3">Third slide label</h6>
+                                                <p class="card-text" id="caption3">Some representative placeholder content for the third slide.</p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="https://via.placeholder.com/150" id="nwsImg4" class="d-block w-100" alt="story image">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h6 class="card-title pb-3" id="newsstory4">Third slide label</h6>
+                                                <p class="card-text" id="caption4">Some representative placeholder content for the third slide.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev" type="" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" type="" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="col-md-8 d-flex align-items-stretch" >
+                <div class="userCard">
+                    <h3 id="companyName"><img class="float-start" id="companyLogo"/>Company Name</h3>
+                    <hr>
+                    <div class=" p-2 card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h6> <small class="card-text" id="cardheadQuarters">Headquarters: </small></h6>
+                            </div>
+                            <div class="col-md-4">  
+                                <h6><small class="mb-3" id="cardType">Type: </small></h6>
+                            </div>
+                            <div class="col-md-4">
+                                <h6><small class="card-text float-end" id="dateNow">As of: </small></h6>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5 my-1 cardData">
+                                <ul>
+                                    <li id="sharePrice">Share Price (USD):</li>
+                                    <li id="yearHigh">52 Week High: </li>
+                                    <li id="yearLow">52 Week Low: </li>
+
+                                </ul>
+
+                            </div>
+                            <div class="col-md-7 my-1 cardData">
+                                <ul>
+                                    <li id="YOY">Year over Year</li>
+                                    <li id="allEarnings">Quarter Earnings Growth:  <span
+                                        id="cardQEarnings"></span></li>
+                                    <li id="allRevenue">Quarter Rev Growth: <span
+                                        id="cardQRevenue"></span></li>
+                                </ul>
+
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <canvas id="myChart" class="w-100" style="border: 1cm solid white;">This is just a test to see how this works</canvas>
+                            </div>
+                                   
+                        </div>
+                        <div class="row pt-5">
+                            <div class="col" id="addRemoveBtn">
+                                <button onclick="watchListBtn(event)" type="button"
+                                class="wlbtn btn btn-success float-end">+ to Watchlist</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+        <div class="row">
+            <div class="col tickercol">
+                    <!--ticker widget script-->
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+                    {
+                    "symbols"; [
+                    {
+                        "proName": "FOREXCOM:SPXUSD",
+                        "title": "S&P 500"
+                    },
+                    {
+                        "proName": "FOREXCOM:NSXUSD",
+                        "title": "Nasdaq 100"
+                    },
+                    {
+                        "proName": "FX_IDC:EURUSD",
+                        "title": "EUR/USD"
+                    },
+                    {
+                        "proName": "BITSTAMP:BTCUSD",
+                        "title": "BTC/USD"
+                    },
+                    {
+                        "proName": "BITSTAMP:ETHUSD",
+                        "title": "ETH/USD"
+                    }
+                    ],
+                    "colorTheme"; "light",
+                    "isTransparent"; false,
+                    "showSymbolLogo"; true,
+                    "locale"; "en"
+                }
+                </script>
+                <!-- <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"id="tradingWidget">
+                    </div>
+  
+           
+                </div> -->
+            </div>
+        </div>
+ 
+        <!-- <div class="userCard" id="newsMain">
+            <h3 id="newsSection">New York Times Business News</h3>
+            <hr>
+            <div class="row row-cols-1 row-cols-md-3 g-1 pt-1">
+                <div class="col">
+                    <div class="card h-100 newsCardFormat " >
+                        <img src="https://via.placeholder.com/150" style="height: 250px; width: auto" id="nwsImg0"class="card-img-top" alt="story image">
+                        <div class="card-body" id="news0">
+                            <h5 class="card-title pb-3" id="newsstory0">Card title</h5>
+                            <p class="card-text" id="caption0">This card has supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 newsCardFormat" >
+                        <img src="https://via.placeholder.com/150" style="height: 250px; width: auto" id="nwsImg1"class="card-img-top" alt="story image">
+                        <div class="card-body" id="news1">
+                            <h5 class="card-title pb-3" id="newsstory1">Card title</h5>
+                            <p class="card-text" id="caption1">This card has supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 newsCardFormat" >
+                        <img src="https://via.placeholder.com/150" style="height: 250px; width: auto" id="nwsImg2"class="card-img-top" alt="story image">
+                        <div class="card-body" id="news2">
+                            <h5 class="card-title pb-3" id="newsstory2">Card title</h5>
+                            <p class="card-text" id="caption2">This card has supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+   
+
+
+
+        <!-- Modal -->
+        <!-- <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">`${compDetails[0]["Name"]}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    ...
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-TradingView Widget BEGIN -->
+
+    </div>
+  <!-- TradingView Widget END -->
+     -->
+    <!--footer-->
+    <footer class="fixed-bottom mt-auto bg-light text-center ">
+        <span class="text-center">
+            Copyright 2021
+        </span>
+    </footer>
+
+    <script src="script2.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

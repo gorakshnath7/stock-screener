@@ -1,0 +1,201 @@
+
+
+.header {
+    text-align: center;
+    background-color: rgb(10, 10, 106);
+    padding: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.btn{
+    background-color: rgb(84, 10, 154);
+    /* border: rgb(85, 10, 155) solid; */
+    border-radius: 1.45rem;
+    
+}
+
+
+
+h1 {
+    color: white;
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    padding: 20px;
+}
+
+#topHalf {
+    margin-bottom: 5px;
+}
+
+.userCard {
+padding: 10px;
+margin-bottom: 20px;
+margin-top: 5px;
+box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+background: white;
+border-radius: 5px;
+min-height: 700px;
+min-width: 100%;
+}
+.watchlistCard {
+padding: 10px;
+margin-bottom: 10px;
+margin-top: 5px;
+box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+background: white;
+border-radius: 5px;
+min-height: 450px;
+height:450px;
+min-width: 100%;
+}
+.carouselCard {
+padding: 10px;
+margin-bottom: 20px;
+margin-top: 5px;
+box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+background: white;
+border-radius: 5px;
+min-height: 200px;
+min-width: 100%;
+}
+
+.carousel {
+    min-height: 150px
+}
+
+
+
+
+.carousel-caption .card-text {
+    font-weight: bold;
+    color:lightgoldenrodyellow;
+
+}
+
+
+
+h6 {
+    font-weight:bold;
+    color: darkslateblue;
+    font-size: 14pt;
+}
+
+
+#newsMain{
+
+    min-height: 500px;
+    }
+
+#companyName {
+    text-align:center;
+}
+h3 {
+    text-align:center;
+    padding: 15px
+
+}
+
+body {
+    background-image: url(Assets/background2.jpeg);
+    background-size:cover;
+    }
+
+
+a {
+    color:black;
+    text-decoration: none;
+}
+
+
+li {
+    list-style-type: none;
+    /* background: lightgray;
+    border: 1px solid gray; */
+
+}
+li button {
+    width: 100%;
+}
+
+
+h5 {
+    color: black;
+}
+
+
+/* #porfolio {
+    height: 500px;
+} */
+
+
+.newsCardFormat{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.5s;
+
+}
+
+.newsCardFormat > img {
+    object-fit: cover;
+}
+
+.newsCardFormat:hover{
+    opacity: 0.75;
+    transform: scale(1.01);
+}
+
+[class *="newsCardFormat"]{
+    text-align: left;
+}
+
+
+
+.testSearchDiv{
+    margin: 15px 0px;
+}
+
+
+#watchlistheader{
+    margin-bottom: 5px;
+}
+
+#newsMain{
+    margin-bottom: 100px;
+}
+
+
+#YOY, #allEarnings, #allRevenue, #sharePrice, #yearHigh, #yearLow{
+    font-weight: bolder;
+
+}
+
+#allEarnings span, #allRevenue span, #sharePrice span, #yearHigh span, #yearLow span{
+    font-weight: normal;
+
+}
+
+.watchlistCard > ul {
+    max-height: 380px;
+}
+
+/* #tradingWidget{
+
+    margin-bottom: 40px;
+    position: relative;
+    bottom: -100px;
+} */
+
+
+.tickercol{
+    margin-bottom: 100px;
+}
+
+.carousel-inner img{
+    object-fit: cover;
+    object-position: center;
+    height: 20vh;
+    overflow: hidden;
+
+}
